@@ -1,8 +1,6 @@
 const gpessoa = (prefix) => {
 
-return `*GERADORE DE DADOS PESSOAIS:*
-
-*NABUTO LS* HEHEHEHE
+return `𝗣𝗲𝘀𝘀𝗼𝗮𝘀 𝗴𝗲𝗿𝗮𝗱𝗮𝘀:
 
 nome: Ester Giovanna Alice Nunes
 idade: 59
