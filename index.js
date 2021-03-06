@@ -317,7 +317,7 @@ async function starts() {
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
 			const isWelkom = isGroup ? welkom.includes(from) : false
-			const isNsfw = isGroup ? nsfw.includes(from) : true
+			const isNsfw = isGroup ? nsfw.includes(from) : false
             const isAntiLink = isGroup ? antilink.includes(from) : false
 	    	const isAnime = isGroup ? anime.includes(from) : false
 	    	const isAntiRacismo = isGroup ? antiracismo.includes(from) : false
@@ -703,9 +703,9 @@ if (text.includes("placa"))
 	    	client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
     }           
             	
-			    if (messagesC.includes("yamete2")){
+			    if (messagesC.includes("deverdade")){
 			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/yamete2.mp3');
+			tujuh = fs.readFileSync('./assets/deverdade.mp3');
 			client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 
@@ -715,15 +715,21 @@ if (text.includes("placa"))
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
-				if (messagesC.includes("elgato")){
+				if (messagesC.includes("onnichan")){
 			client.updatePresence(from, Presence.composing)
-			tujuh = fs.readFileSync('./assets/elgato.mp3');
+			tujuh = fs.readFileSync('./assets/onnichan.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
 					if (messagesC.includes("narutinho")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/narutinho.mp3');
+            client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+	}
+
+					if (messagesC.includes("pldepressing")){
+			client.updatePresence(from, Presence.composing)
+			tujuh = fs.readFileSync('./assets/pldepressing.mp3');
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 	
@@ -1835,15 +1841,15 @@ if (text.includes("placa"))
          case 'moddroid':
 			data = await fetchJson(`https://tobz-api.herokuapp.com/api/moddroid?q=${body.slice(10)}&apikey=${TobzApi}`)
 			hepi = data.result[0] 
-			teks = `📍𝗡𝗢𝗠𝗘: ${data.result[0].title}\n📍𝗘𝗗𝗜𝗧𝗢𝗥: ${hepi.publisher}\n📍𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗢𝗘𝗦 𝗗𝗢 𝗠𝗢𝗗 ${hepi.mod_info}\n📍𝗧𝗔𝗠𝗔𝗡𝗛𝗢: ${hepi.size}\n📍𝗨𝗟𝗧𝗜𝗠𝗔 𝗩𝗘𝗥𝗦𝗔𝗢: ${hepi.latest_version}\n📍𝗚𝗘𝗡𝗘𝗥𝗢: ${hepi.genre}\n𝗟𝗜𝗡𝗞📍 ${hepi.link}\n📍𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗: ${hepi.download}`
+			teks = `📍𝗡𝗢𝗠𝗘: ${data.result[0].title}\n📍𝗘𝗗𝗜𝗧𝗢𝗥: ${hepi.publisher}\n📍𝗜𝗡𝗙𝗢𝗥𝗠𝗔𝗖𝗢𝗘𝗦 𝗗𝗢 𝗠𝗢𝗗 ${hepi.mod_info}\n📍𝗧𝗔𝗠𝗔𝗡𝗛𝗢: ${hepi.size}\n📍𝗨𝗟𝗧𝗜𝗠𝗔 𝗩𝗘𝗥𝗦𝗔𝗢: ${hepi.latest_version}\n📍𝗚𝗘𝗡𝗘𝗥𝗢: ${hepi.genre}\n𝗟𝗜𝗡𝗞📍 ${hepi.link}\n📍𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗: ${hepi.download}\n\nBy Dobby🙈`
 			buffer = await getBuffer(hepi.image)
 			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
 			break
-		case 'happymod':
-			data = await fetchJson(`https://tobz-api.herokuapp.com/api/happymod?q=${body.slice(10)}&apikey=${TobzApi}`)
+		case 'modd':
+			data = await fetchJson(`https://tobz-api.herokuapp.com/api/modd?q=${body.slice(10)}&apikey=${TobzApi}`)
 			hupo = data.result[0] 
-			teks = `📍𝗡𝗢𝗠𝗘: ${data.result[0].title}\n📍𝗩𝗘𝗥𝗦𝗔𝗢: ${hupo.version}\n📍𝗧𝗔𝗠𝗔𝗡𝗛𝗢: ${hupo.size}\📍𝗥𝗢𝗢𝗧: ${hupo.root}\n📍𝗣𝗥𝗘𝗖𝗢: ${hupo.price}\n📍𝗟𝗜𝗡𝗞: ${hupo.link}\n📍𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗: ${hupo.download}`
+			teks = `📍𝗡𝗢𝗠𝗘: ${data.result[0].title}\n📍𝗩𝗘𝗥𝗦𝗔𝗢: ${hupo.version}\n📍𝗧𝗔𝗠𝗔𝗡𝗛𝗢: ${hupo.size}\📍𝗥𝗢𝗢𝗧: ${hupo.root}\n📍𝗣𝗥𝗘𝗖𝗢: ${hupo.price}\n📍𝗟𝗜𝗡𝗞: ${hupo.link}\n📍𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗: ${hupo.download}\n\nBy Dobby 🙈`
 			buffer = await getBuffer(hupo.image)
 			client.sendMessage(from, buffer, image, {quoted: mek, caption: `${teks}`})
 			await limitAdd(sender)
@@ -3574,7 +3580,7 @@ break
 				case 'loli18':
 					if (!isNsfw) return reply('❗𝗗𝗜𝗦𝗣𝗢𝗡𝗜𝗩𝗘𝗟 𝗔𝗣𝗘𝗡𝗔𝗦 𝗡𝗢 𝗣𝗩❗')
 					loli.getNSFWLoli(async (err, res) => {
-						if (err) return reply('❌ *ERRO* ❌')
+						if (err) return reply('❗𝗖𝗢𝗠𝗔𝗡𝗗𝗢 𝗗𝗘𝗦𝗔𝗧𝗜𝗩𝗔𝗗𝗢❗')
 						buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: '✅'})
 					})
